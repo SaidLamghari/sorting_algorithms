@@ -64,8 +64,8 @@ void fastsort(int *array, int start, int end, size_t size)
 	if (start < end)
 	{
 		pvt = lomut_part(array, start, end, size);
-		quicksort(array, start, pvt - 1, size);
-		quicksort(array, pvt + 1, end, size);
+		fastsort(array, start, pvt - 1, size);
+		fastsort(array, pvt + 1, end, size);
 	}
 }
 
