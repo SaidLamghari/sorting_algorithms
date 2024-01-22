@@ -1,4 +1,4 @@
-#include "so.h"
+#include "sor.h"
 /**
  * shell_sort -puts the elments of an array where
  * the high value comes first and the lowest in the end.
