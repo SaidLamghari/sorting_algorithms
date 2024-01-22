@@ -6,22 +6,27 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t cpt, cpt2, tmp;
+	int tp;
+	size_t cp1, cp2;
 
 	if (array == NULL)
 		return;
-	if (size == 0)
+	if (!size)
 		return;
 
-	for (cpt = 0; cpt < size; cpt++)
+
+	for (cp1 = 0; cp1 < size - 1; cp1++)
 	{
-		for (cpt2 = 0; cpt2 < size - 1; cpt2++)
+
+		for (cp2 = 0; cp2 < size - cp1 - 1; cp2++)
 		{
-			if (array[cpt2] > array[cpt2 + 1])
+			if (array[cp2] > array[cp2 + 1])
 			{
-				tmp = array[cpt2];
-				array[cpt2] = array[cpt2 + 1];
-				array[cpt2 + 1] = tmp;
+				tp = array[cp2];
+				array[cp2] = array[cp + 1];
+				array[cp2 + 1] = tp;
+
+
 				print_array(array, size);
 			}
 		}
